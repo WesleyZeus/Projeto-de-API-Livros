@@ -14,6 +14,7 @@ app = server.app
 db.init_app(app)
 ma.init_app(app)
 
+
 def create_tables():
     with app.app_context():
         db.create_all()
