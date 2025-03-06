@@ -4,11 +4,12 @@ from marshmallow import ValidationError
 from flask_sqlalchemy import SQLAlchemy
 
 
-
 class Server():
     def __init__(self, ):
 
-        self.app = Flask(__name__, template_folder='C:/Users/wesley silva/Desktop/Projeto de API Livros/templates', static_folder="C:/Users/wesley silva/Desktop/Projeto de API Livros/static")
+        self.app = Flask(__name__, 
+                 template_folder='C:/Users/wesley silva/Desktop/Projeto de API Livros/templates', 
+                 static_folder='C:/Users/wesley silva/Desktop/Projeto de API Livros/static')    
 
 
 

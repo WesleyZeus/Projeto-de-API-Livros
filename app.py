@@ -24,7 +24,7 @@ create_tables()
 api.add_resource(Book,'/books/<int:id>')
 api.add_resource(BookList, '/books')
 
-@app.route("/")
+@app.route('/')
 def home():
     return render_template('home.html')
 
