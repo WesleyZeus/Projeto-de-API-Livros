@@ -1,6 +1,7 @@
-from flask import Flask, jsonify, request, redirect, render_template
+from flask import Flask, jsonify, request, render_template
 from flask_restx import Api, Resource
 from marshmallow import ValidationError
+
 
 from db import db
 from ma import ma
@@ -24,13 +25,11 @@ create_tables()
 api.add_resource(Book,'/books/<int:id>')
 api.add_resource(BookList, '/books')
 
+
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
-@app.route("/api/doc")
-def api_doc():
-    pass
 
 
 if __name__ == '__main__':

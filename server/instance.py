@@ -2,15 +2,14 @@ from flask import Flask, Blueprint
 from flask_restx import Api
 from marshmallow import ValidationError
 from flask_sqlalchemy import SQLAlchemy
-
+import os
 
 class Server():
     def __init__(self, ):
 
         self.app = Flask(__name__, 
-                 template_folder='C:/Users/wesley silva/Desktop/Projeto de API Livros/templates', 
-                 static_folder='C:/Users/wesley silva/Desktop/Projeto de API Livros/static')    
-
+                        template_folder=os.path.abspath("templates"),
+                        static_folder=os.path.abspath("static"))
 
 
         self.blueprint = Blueprint('api', __name__, url_prefix='/api')
