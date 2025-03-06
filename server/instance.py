@@ -7,7 +7,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 class Server():
     def __init__(self, ):
-        self.app = Flask(__name__)
+
+        self.app = Flask(__name__, template_folder='C:/Users/wesley silva/Desktop/Projeto de API Livros/templates', static_folder="C:/Users/wesley silva/Desktop/Projeto de API Livros/static")
+
 
 
         self.blueprint = Blueprint('api', __name__, url_prefix='/api')
